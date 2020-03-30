@@ -118,7 +118,7 @@
             */
 
             options.CleanSession = true;
-            options.KeepAlivePeriod = TimeSpan.FromSeconds(5);
+            options.KeepAlivePeriod = TimeSpan.FromSeconds(50);
             this.managedMqttClientPublisher = mqttFactory.CreateManagedMqttClient();
             this.managedMqttClientPublisher.UseApplicationMessageReceivedHandler((Action<MqttApplicationMessageReceivedEventArgs>)this.HandleReceivedApplicationMessage);
             this.managedMqttClientPublisher.ConnectedHandler = new MqttClientConnectedHandlerDelegate((Action<MqttClientConnectedEventArgs>) OnPublisherConnected);
@@ -244,7 +244,7 @@
             };
             */
             options.CleanSession = true;
-            options.KeepAlivePeriod = TimeSpan.FromSeconds(5);
+            options.KeepAlivePeriod = TimeSpan.FromSeconds(50);
 
             this.managedMqttClientSubscriber = mqttFactory.CreateManagedMqttClient();
             Form1 form1 = this;
@@ -319,5 +319,6 @@
                     this.ButtonSubscriberStop.Enabled = this.managedMqttClientSubscriber != null;
                 });
         }
+
     }
 }

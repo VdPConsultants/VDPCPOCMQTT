@@ -254,7 +254,7 @@
             this.TextBoxURI.Name = "TextBoxURI";
             this.TextBoxURI.Size = new System.Drawing.Size(188, 20);
             this.TextBoxURI.TabIndex = 7;
-            this.TextBoxURI.Text = "2217.115.205.186";
+            this.TextBoxURI.Text = "217.115.205.186";
             // 
             // label7
             // 
